@@ -7,7 +7,7 @@ Download this extension from the [VS Gallery](https://visualstudiogallery.msdn.m
 Visual Studio extension for optimizing build speed by reducing unnecessary project\lib copying. 
 Project also can show independent projects in your solution and check all lib reference on the same versions and .dll paths.
 
-You should use optimized build just if 
+You should use optimized build just if your main project have many project references with the same libs. Otherwise you don't get any time and memory excellence.
 
 See the [change log](CHANGELOG.md) for changes and road map.
 
