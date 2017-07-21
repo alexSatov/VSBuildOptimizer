@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <Extern href="stdidcmd.h" />
+
+  <Extern href="vsshlids.h" />
+
+  <Commands package="guidVSBuildOptimizerCommandsPackage">
+    <Groups>
+      <Group guid="guidVSBuildOptimizerCommandsProjectCmdSet" id="ProjectMenuGroup" priority="0x0300">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_PROJNODE" />
+      </Group>
+      
+      <Group guid="guidVSBuildOptimizerCommandsSolutionCmdSet" id="SolutionMenuGroup" priority="0x0200">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_SOLNNODE" />
+      </Group>
+    </Groups>
+
+    <Buttons>
+      <Button guid="guidVSBuildOptimizerCommandsSolutionCmdSet" id="IndependentProjectsCommandId" priority="0x0100" type="Button">
+        <Parent guid="guidVSBuildOptimizerCommandsSolutionCmdSet" id="SolutionMenuGroup" />
+        <Icon guid="guidImages" id="pngPic1" />
+        <Strings>
+          <ButtonText>Show Independent Projects</ButtonText>
+        </Strings>
+      </Button>
+      
+      <Button guid="guidVSBuildOptimizerCommandsProjectCmdSet" id="CheckLibReferencesCommandId" priority="0x0101" type="Button">
+        <Parent guid="guidVSBuildOptimizerCommandsProjectCmdSet" id="ProjectMenuGroup" />
+        <Icon guid="guidImages" id="pngPic2" />
+        <Strings>
+          <ButtonText>Check All References</ButtonText>
+        </Strings>
+      </Button>
+      
+      <Button guid="guidVSBuildOptimizerCommandsProjectCmdSet" id="OptimizedBuildCommandId" priority="0x0111" type="Button">
+        <Parent guid="guidVSBuildOptimizerCommandsProjectCmdSet" id="ProjectMenuGroup" />
+        <Icon guid="guidImages" id="pngPic3" />
+        <Strings>
+          <ButtonText>Optimize and build...</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+  
+    <Bitmaps>
+      <Bitmap guid="guidImages" href="Resources\BuildOptimizerImages.png" usedList="pngPic1, pngPic2, pngPic3"/>
+    </Bitmaps>
+  </Commands>
+
+  <Symbols>
+    <GuidSymbol name="guidVSBuildOptimizerCommandsPackage" value="{236f2095-cf8f-42bf-ae31-8040cbba5134}" />
+
+    <GuidSymbol name="guidVSBuildOptimizerCommandsProjectCmdSet" value="{4b065022-605d-42e4-bc25-fe6765555063}">
+      <IDSymbol name="ProjectMenuGroup" value="0x1020" />
+      <IDSymbol name="CheckLibReferencesCommandId" value="0x0101" />
+      <IDSymbol name="OptimizedBuildCommandId" value="0x0111" />
+    </GuidSymbol>
+  
+    <GuidSymbol name="guidVSBuildOptimizerCommandsSolutionCmdSet" value="{ee225585-93f2-4f3e-8992-98020f3a2dc4}">
+      <IDSymbol name="SolutionMenuGroup" value="0x1020" />
+      <IDSymbol name="IndependentProjectsCommandId" value="0x0100" />
+    </GuidSymbol>
+
+    <GuidSymbol name="guidImages" value="{ea57ba5f-bab9-4639-bac5-77c2f655fa44}">
+      <IDSymbol name="pngPic1" value="1"/>
+      <IDSymbol name="pngPic2" value="2"/>
+      <IDSymbol name="pngPic3" value="3"/>
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>
