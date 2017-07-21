@@ -78,7 +78,7 @@ namespace VSBuildOptimizer.Commands
 
         private static IEnumerable<ProjectObjectModel.Project> GetSelectedProjects(DTE2 dte, Model model)
         {
-            var selectedItems = (Array)dte.ToolWindows.SolutionExplorer.SelectedItems;
+            var selectedItems = (Array) dte.ToolWindows.SolutionExplorer.SelectedItems;
 
             return from selectedItem in selectedItems.Cast<UIHierarchyItem>()
                 let projFileInfo = new FileInfo($"{selectedItem.Name}{ProjectObjectModel.Project.Extension}")

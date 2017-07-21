@@ -9,20 +9,20 @@ using Microsoft.VisualStudio.Shell.Interop;
 
 namespace VSBuildOptimizer.Commands
 {
-    internal sealed class IndependentProjectsCommand
+    internal sealed class NonReferencedProjectsCommand
     {
         public const int CommandId = 0x0100;
 
         public static readonly Guid CommandSet = new Guid("ee225585-93f2-4f3e-8992-98020f3a2dc4");
 
-        public static IndependentProjectsCommand Instance { get; private set; }
+        public static NonReferencedProjectsCommand Instance { get; private set; }
 
         private readonly Package package;
         private IVsOutputWindowPane outputPane;
 
         private IServiceProvider ServiceProvider => package;
 
-        private IndependentProjectsCommand(Package package)
+        private NonReferencedProjectsCommand(Package package)
         {
             outputPane         = OutputWindow.Pane;
             this.package       = package ?? throw new ArgumentNullException(nameof(package));
@@ -38,7 +38,7 @@ namespace VSBuildOptimizer.Commands
 
         public static void Initialize(Package package)
         {
-            Instance = new IndependentProjectsCommand(package);
+            Instance = new NonReferencedProjectsCommand(package);
         }
 
         private void MenuItemCallback(object sender, EventArgs e)
@@ -58,7 +58,7 @@ namespace VSBuildOptimizer.Commands
 
         private static void ShowIndependentProjects(Model model)
         {
-            foreach (var independentProject in model.GetIndependentProjects())
+            foreach (var independentProject in model.GetNonReferencedProjects())
                 MessageWriter.Write(independentProject.ToString());
             MessageWriter.Write("");
         }

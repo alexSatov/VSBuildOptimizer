@@ -17,7 +17,7 @@
     </Groups>
 
     <Buttons>
-      <Button guid="guidVSBuildOptimizerCommandsSolutionCmdSet" id="IndependentProjectsCommandId" priority="0x0100" type="Button">
+      <Button guid="guidVSBuildOptimizerCommandsSolutionCmdSet" id="NonReferencedProjectsCommandId" priority="0x0100" type="Button">
         <Parent guid="guidVSBuildOptimizerCommandsSolutionCmdSet" id="SolutionMenuGroup" />
         <Icon guid="guidImages" id="pngPic1" />
         <Strings>
@@ -58,7 +58,7 @@
   
     <GuidSymbol name="guidVSBuildOptimizerCommandsSolutionCmdSet" value="{ee225585-93f2-4f3e-8992-98020f3a2dc4}">
       <IDSymbol name="SolutionMenuGroup" value="0x1020" />
-      <IDSymbol name="IndependentProjectsCommandId" value="0x0100" />
+      <IDSymbol name="NonReferencedProjectsCommandId" value="0x0100" />
     </GuidSymbol>
 
     <GuidSymbol name="guidImages" value="{ea57ba5f-bab9-4639-bac5-77c2f655fa44}">

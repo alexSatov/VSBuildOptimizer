@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="5a6a87d6-88ba-43fb-b257-df2d514af96b" Version="1.0" Language="en-US" Publisher="Alexander Satov" />
+    <Identity Id="5a6a87d6-88ba-43fb-b257-df2d514af96b" Version="1.0.1" Language="en-US" Publisher="Alexander Satov" />
     <DisplayName>BuildOptimizer</DisplayName>
     <Description xml:space="preserve">Project for optimizing build speed by reducing unnecessary project\lib copying. 
 Project also can show independent projects in your solution and check all lib reference on the same versions and .dll paths.</Description>
+    <MoreInfo>https://github.com/alexSatov/VSBuildOptimizer</MoreInfo>
     <License>Resources\LICENSE</License>
     <Icon>Resources\Icon.png</Icon>
     <PreviewImage>Resources\Preview.png</PreviewImage>

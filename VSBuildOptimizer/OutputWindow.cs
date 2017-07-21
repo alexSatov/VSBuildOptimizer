@@ -15,7 +15,7 @@ namespace VSBuildOptimizer
             var customGuid = new Guid("8320df0c-39d2-4591-b686-82fb6005f5e5");
 
             outWindow.CreatePane(ref customGuid, "VSBuildOptimizer", 1, 1);
-            outWindow.GetPane(ref customGuid, out IVsOutputWindowPane pane);
+            outWindow.GetPane   (ref customGuid, out IVsOutputWindowPane pane);
 
             Pane = pane;
 

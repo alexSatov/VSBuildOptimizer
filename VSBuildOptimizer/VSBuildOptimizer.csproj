@@ -52,7 +52,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Commands\CheckAllReferencesCommand.cs" />
-    <Compile Include="Commands\IndependentProjectsCommand.cs" />
+    <Compile Include="Commands\NonReferencedProjectsCommand.cs" />
     <Compile Include="VSBuildOptimizerCommandsPackage.cs" />
     <Compile Include="Commands\OptimizedBuildCommand.cs" />
     <Compile Include="OutputWindow.cs" />
@@ -80,7 +80,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Resources\IndependentProjectsCommandPackage.ico" />
+    <Content Include="Resources\VSBuildOptimizerCommandsPackage.ico" />
     <Content Include="Resources\Preview.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
@@ -173,7 +173,7 @@
     </Reference>
     <Reference Include="ProjectObjectModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\BuildOptimizer\BuildOptimizer\ProjectObjectModel\bin\Release\ProjectObjectModel.dll</HintPath>
+      <HintPath>..\packages\ProjectObjectModel\ProjectObjectModel.dll</HintPath>
     </Reference>
     <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>False</EmbedInteropTypes>
@@ -189,9 +189,11 @@
     <EmbeddedResource Include="VSPackage.resx">
       <MergeWithCTO>true</MergeWithCTO>
       <ManifestResourceName>VSPackage</ManifestResourceName>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>VSPackage.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
