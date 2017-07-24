@@ -21,3 +21,9 @@ on the official Visual Studio extension gallery.
 **21-07-2017**
 
 - [x] Detailed README
+
+### 1.0.2
+
+**24-07-2017**
+
+- [x] Change Independent Projects Command on Non-Refrenced Projects Command

@@ -21,7 +21,7 @@
         <Parent guid="guidVSBuildOptimizerCommandsSolutionCmdSet" id="SolutionMenuGroup" />
         <Icon guid="guidImages" id="pngPic1" />
         <Strings>
-          <ButtonText>Show Independent Projects</ButtonText>
+          <ButtonText>Show Non-Referenced Projects</ButtonText>
         </Strings>
       </Button>
       

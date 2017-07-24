@@ -29,7 +29,7 @@ Model optimizes the project as follows:
 - Check inner project references on same versions and .dll paths
 - Optimize all references for selected project and build __all projects__ in solution
 
-### Non-referenced Projects
+### Non-Referenced Projects
 
 If you have many projects in one solution, you can probably want to know, which projects are non-referenced (don't referenced by other projects in same solution)
 
