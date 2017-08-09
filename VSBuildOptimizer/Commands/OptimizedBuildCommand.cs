@@ -3,7 +3,6 @@ using System;
 using EnvDTE80;
 using System.IO;
 using System.Linq;
-using BuildOptimizer;
 using ProjectObjectModel;
 using System.Collections.Generic;
 using System.ComponentModel.Design;

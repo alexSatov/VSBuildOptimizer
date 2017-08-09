@@ -27,3 +27,15 @@ on the official Visual Studio extension gallery.
 **24-07-2017**
 
 - [x] Change Independent Projects Command on Non-Refrenced Projects Command
+
+### 1.0.3
+
+**03-08-2017**
+
+- [x] Update ProjectObjectModel: fix solution parsing, parse artifacts from module.yaml (if project is PM module).
+
+### 1.0.4
+
+**09-08-2017**
+
+- [x] Update ProjectObjectModel: refused the yaml parsing.
